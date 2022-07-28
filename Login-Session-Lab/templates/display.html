@@ -6,9 +6,16 @@
 	<title></title>
 </head>
 <body>
-
+	{%for i in login_session%}
+		{%for x in login_session[i]%}
+			{{login_session[i][x]}}
+		{%endfor%}
+	<br>
+	{%endfor%}
 <!-- Display the variables from the login session here!
  -->
+
+<button onclick=window.location.href='{{url_for("home")}}'>Add another quote</button>
 
 </body>
 </html>
